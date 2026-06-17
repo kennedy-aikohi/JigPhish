@@ -1,0 +1,15 @@
+{
+  "analyst_name": "SOC Analyst",
+  "max_workers": 6,
+  "request_timeout_seconds": 12,
+  "redirect_limit": 7,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 JigPhish/1.0",
+  "geoip_database_path": "",
+  "stealth_mode": false,
+  "api_keys": {
+    "virustotal": "",
+    "hybrid_analysis": "",
+    "abuseipdb": "",
+    "urlscan": ""
+  }
+}

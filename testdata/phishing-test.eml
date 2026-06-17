@@ -1,0 +1,124 @@
+MIME-Version: 1.0
+Received: from evil-relay.paypa1-notification.ru (evil-relay.paypa1-notification.ru [91.108.4.200])
+        by mx1.victim.example.com (Postfix) with ESMTPS id A1B2C3D4EF
+        for <victim@victim.example.com>; Mon, 16 Jun 2026 08:42:11 -0500 (CDT)
+Received: from localhost (127.0.0.1)
+        by evil-relay.paypa1-notification.ru with ESMTP id X9Y8Z7W6V5
+        for <victim@victim.example.com>; Mon, 16 Jun 2026 13:41:55 +0000 (UTC)
+Authentication-Results: mx1.victim.example.com;
+        spf=fail (domain of paypa1-notification.ru does not designate 91.108.4.200 as permitted sender)
+         smtp.mailfrom=noreply@paypa1-notification.ru;
+        dkim=fail (signature verification failed) header.d=paypa1-notification.ru;
+        dmarc=fail (p=REJECT) header.from=paypal.com
+X-Original-To: victim@victim.example.com
+X-Mailer: Microsoft Outlook 16.0 (spoofed)
+Date: Mon, 16 Jun 2026 08:41:22 -0500
+From: "PayPal Customer Support" <noreply@paypal.com>
+Return-Path: <bounces@paypa1-notification.ru>
+Reply-To: support-desk@paypa1-notification.ru
+To: victim@victim.example.com
+Message-ID: <20260616134122.1A2B3C4D5E@paypa1-notification.ru>
+Subject: =?UTF-8?B?VVJHRU5UOiBZb3VyIFBheVBhbCBBY2NvdW50IEhhcyBCZWVuIExJTUlURUQ=?=
+Content-Type: multipart/mixed;
+	boundary="----=_Part_JigPhish_TestBoundary_001"
+
+------=_Part_JigPhish_TestBoundary_001
+Content-Type: multipart/alternative;
+	boundary="----=_Part_JigPhish_TestBoundary_Alt_002"
+
+------=_Part_JigPhish_TestBoundary_Alt_002
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+URGENT SECURITY NOTICE - IMMEDIATE ACTION REQUIRED
+
+Dear PayPal Member,
+
+We have detected SUSPICIOUS LOGIN ACTIVITY on your account. Your account =
+has been LIMITED effective immediately.
+
+To restore full access, you must verify your identity within 24 HOURS or =
+your account will be PERMANENTLY SUSPENDED.
+
+Click the link below to verify your account immediately:
+
+   https://paypa1.com/secure/verify?token=3DaXk29mLQ7vR5sN8wT4pE1uY6cH0jB&redirect=3Dhttps://paypal.com
+
+If you don't act NOW, your funds may be frozen permanently.
+
+-- PayPa1 Security Team
+------=_Part_JigPhish_TestBoundary_Alt_002
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgPG1ldGEgY2hhcnNl
+dD0iVVRGLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZp
+Y2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiAgPHRpdGxlPlBheVBhbCBTZWN1cml0eSBB
+bGVydDwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmhpZGRlbi10cmFja2VyIHsgZm9udC1zaXpl
+OiAwcHg7IHZpc2liaWxpdHk6IGhpZGRlbjsgY29sb3I6IHRyYW5zcGFyZW50OyB9CiAgICAu
+emVyby1mb250IHsgZm9udC1zaXplOiAxcHg7IGNvbG9yOiAjZmZmZmZmOyBiYWNrZ3JvdW5k
+LWNvbG9yOiAjZmZmZmZmOyB9CiAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keSBzdHlsZT0ibWFy
+Z2luOjA7cGFkZGluZzowO2JhY2tncm91bmQ6I2YwZjBmMDtmb250LWZhbWlseTpBcmlhbCxz
+YW5zLXNlcmlmIj4KCjxzcGFuIGNsYXNzPSJoaWRkZW4tdHJhY2tlciI+dGhpcyBlbWFpbCBp
+cyBmb3IgYWNjb3VudCB2ZXJpZmljYXRpb24gcHVycG9zZXMgb25seSB5b3UgbXVzdCBjb25m
+aXJtIHlvdXIgaWRlbnRpdHk8L3NwYW4+CjxzcGFuIGNsYXNzPSJ6ZXJvLWZvbnQiPkJlc3Qg
+UmVnYXJkcyBQYXlQYWwgQ3VzdG9tZXIgQ2FyZTwvc3Bhbj4KCjx0YWJsZSB3aWR0aD0iMTAw
+JSIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBiZ2NvbG9yPSIjZjBmMGYwIj4K
+ICA8dHI+PHRkIGFsaWduPSJjZW50ZXIiIHN0eWxlPSJwYWRkaW5nOjMwcHggMjBweCI+CiAg
+ICA8dGFibGUgd2lkdGg9IjYwMCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBi
+Z2NvbG9yPSIjZmZmZmZmIiBzdHlsZT0iYm9yZGVyLXJhZGl1czoxMHB4O2JveC1zaGFkb3c6
+MCA0cHggMjBweCByZ2JhKDAsMCwwLC4xNSkiPgoKICAgICAgPHRyPjx0ZCBzdHlsZT0iYmFj
+a2dyb3VuZDojMDAzMDg3O3BhZGRpbmc6MjVweCA0MHB4O2JvcmRlci1yYWRpdXM6MTBweCAx
+MHB4IDAgMCI+CiAgICAgICAgPHRhYmxlIHdpZHRoPSIxMDAlIj48dHI+CiAgICAgICAgICA8
+dGQgc3R5bGU9ImNvbG9yOiNmZmZmZmY7Zm9udC1zaXplOjI0cHg7Zm9udC13ZWlnaHQ6Ymls
+ZCI+UGF5UGFsPC90ZD4KICAgICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiIHN0eWxlPSJjb2xv
+cjojZmZjMDAwO2ZvbnQtc2l6ZToxNHB4O2ZvbnQtd2VpZ2h0OmJvbGQiPtCh&#1045;CURJVF&#1040;
+QUxFUlQ8L3RkPgogICAgICAgIDwvdHI+PC90YWJsZT4KICAgICAgPC90ZD48L3RyPgoKICAg
+ICAgPHRyPjx0ZCBzdHlsZT0icGFkZGluZzo0MHB4Ij4KICAgICAgICA8aDIgc3R5bGU9ImNv
+bG9yOiNkMzI4MjA7Zm9udC1zaXplOjIycHg7bWFyZ2luOjAgMCAyMHB4IuI+CiAgICAgICAg
+ICDwn5+TIFVSR0VOVDogWW91ciBBY2NvdW50IEhhcyBCZWVuIExpbWl0ZWQKICAgICAgICA8
+L2gyPgogICAgICAgIDxwIHN0eWxlPSJjb2xvcjojMzMzMzMzO2ZvbnQtc2l6ZToxNnB4O2xp
+bmUtaGVpZ2h0OjEuNjttYXJnaW46MCAwIDE1cHgiPgogICAgICAgICAgRGVhciBQYXlQYWwg
+VmFsdWVkIEN1c3RvbWVyLAogICAgICAgIDwvcD4KICAgICAgICA8cCBzdHlsZT0iY29sb3I6
+IzMzMzMzMztmb250LXNpemU6MTZweDtsaW5lLWhlaWdodDoxLjY7bWFyZ2luOjAgMCAxNXB4
+Ij4KICAgICAgICAgIFdlIGhhdmUgZGV0ZWN0ZWQgPHN0cm9uZyBzdHlsZT0iY29sb3I6I2Qz
+MjgyMCI+dW51c3VhbCBsb2dpbiBhY3Rpdml0eTwvc3Ryb25nPiBmcm9tIGFuIHVua25vd24g
+bG9jYXRpb24gKFJ1c3NpYW4gRmVkZXJhdGlvbikuIEZvciBzZWN1cml0eSByZWFzb25zLCB3
+ZSBoYXZlIDxzdHJvbmcgc3R5bGU9ImNvbG9yOiNkMzI4MjAiPmxpbWl0ZWQgeW91ciBhY2Nv
+dW50PC9zdHJvbmc+LgogICAgICAgIDwvcD4KICAgICAgICA8ZGl2IHN0eWxlPSJiYWNrZ3Jv
+dW5kOiNmZmY4ZjA7Ym9yZGVyLWxlZnQ6NHB4IHNvbGlkICNmZjcwMDA7cGFkZGluZzoxNXB4
+IDIwcHg7bWFyZ2luOjIwcHggMDtib3JkZXItcmFkaXVzOjAgNHB4IDRweCAwIj4KICAgICAg
+ICAgIDxzdHJvbmcgc3R5bGU9ImNvbG9yOiNmZjcwMDA7Zm9udC1zaXplOjE1cHgiPuKaoO+4
+jyBJbXBvcnRhbnQ6IFlvdSBoYXZlIDI0IGhvdXJzIHRvIHZlcmlmeSB5b3VyIGlkZW50aXR5
+Ljwvc3Ryb25nPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IHN0eWxlPSJ0ZXh0LWFs
+aWduOmNlbnRlcjttYXJnaW46MzBweCAwIj4KICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8v
+cGF5cGExLmNvbS9zZWN1cmUvdmVyaWZ5P3Rva2VuPWFYazI5bUxRN3ZSNXNOOF93VDRwRTF1
+WTZjSDBqQiZhbXA7cmVkaXJlY3Q9aHR0cHM6Ly9wYXlwYWwuY29tIgogICAgICAgICAgICBz
+dHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7YmFja2dyb3VuZDojMDAzMDg3O2NvbG9yOiNm
+ZmZmZmY7cGFkZGluZzoxNXB4IDQwcHg7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyLXJh
+ZGl1czo1cHg7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6MTZweCI+CiAgICAgICAgICAg
+IFZlcmlmeSBNeSBBY2NvdW50IE5vdyAmcmFycjsKICAgICAgICAgIDwvYT4KICAgICAgICA8
+L2Rpdj4KCiAgICAgICAgPHAgc3R5bGU9ImNvbG9yOiM5OTk5OTk7Zm9udC1zaXplOjEzcHg7
+bWFyZ2luLXRvcDozMHB4Ij4KICAgICAgICAgIElmIHlvdSBkaWQgbm90IHJlcXVlc3QgdGhp
+cywgY2FsbCB1cyBpbW1lZGlhdGVseSBhdCA8YSBocmVmPSJ0ZWw6KzE4ODg1NTU5OTk5IiBz
+dHlsZT0iY29sb3I6IzAwMzA4NyI+KzEtODg4LTU1NS05OTk5PC9hPgogICAgICAgIDwvcD4K
+ICAgICAgPC90ZD48L3RyPgoKICAgICAgPHRyPjx0ZCBzdHlsZT0iYmFja2dyb3VuZDojZjVm
+NWY1O3BhZGRpbmc6MjBweDs0MHB4O2JvcmRlci1yYWRpdXM6MCAwIDEwcHggMTBweDt0ZXh0
+LWFsaWduOmNlbnRlcjtjb2xvcjojOTk5OTk5O2ZvbnQtc2l6ZToxMnB4Ij4KICAgICAgICAg
+UGF5UGFsIEluYy4gMiBQZXRlciBDb29wZXIgUm9hZCwgU2FuIEpvc2UsIENBIDk1MTMxIDxici8+
+CiAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly9tYWxpY2lvdXMtdHJhY2suZXZpbC1zdGF0cy5y
+dS91bnN1YnNjcmliZT9pZD12aWN0aW1AZXhhbXBsZS5jb20iIHN0eWxlPSJjb2xvcjojMDAz
+MDg3Ij5VbnN1YnNjcmliZTwvYT4KICAgICAgPC90ZD48L3RyPgoKICAgIDwvdGFibGU+CiAg
+PC90ZD48L3RyPgo8L3RhYmxlPgoKPC9ib2R5Pgo8L2h0bWw+Cg==
+
+------=_Part_JigPhish_TestBoundary_Alt_002--
+
+------=_Part_JigPhish_TestBoundary_001
+Content-Type: application/octet-stream; name="PayPal-Account-Update.exe"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="PayPal-Account-Update.exe"
+
+TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAoAAA4AAAAA==
+
+------=_Part_JigPhish_TestBoundary_001--

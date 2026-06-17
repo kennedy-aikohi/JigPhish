@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg-base: #080d18;
+  --bg-panel: #0b101e;
+  --bg-card: #0f172a;
+  --border: rgba(148, 163, 184, 0.12);
+  --cyan: #06b6d4;
+  --glow-cyan: rgba(6, 182, 212, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'ss01' 1;
+  font-size: 15px;
+  background: var(--bg-base);
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.28); }
+
+/* ── Wails drag-and-drop highlight ── */
+[style*="--wails-drop-target"].wails-drop-target-active {
+  border-color: var(--cyan) !important;
+  background: var(--glow-cyan) !important;
+  box-shadow: 0 0 0 2px rgba(6,182,212,0.25);
+}
+
+/* ── Monospace family override ── */
+.font-mono, code, pre, .mono {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* ── App window drag region ── */
+header {
+  --wails-draggable: drag;
+}
+header button, header a, header input, header select {
+  --wails-draggable: no-drag;
+}
+
+/* ── Selection color ── */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: #e2e8f0;
+}
+
+/* ── Focus ring ── */
+:focus-visible {
+  outline: 2px solid rgba(6,182,212,0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Transition defaults ── */
+button {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+/* ── Risk gauge animation ── */
+@keyframes gauge-fill {
+  from { stroke-dashoffset: var(--arc-length); }
+  to   { stroke-dashoffset: var(--dash-offset); }
+}
+
+.gauge-arc {
+  animation: gauge-fill 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Glow effects ── */
+.glow-cyan {
+  filter: drop-shadow(0 0 6px rgba(6,182,212,0.45));
+}
+
+.glow-rose {
+  filter: drop-shadow(0 0 6px rgba(248,113,113,0.45));
+}
+
+/* ── Tab underline animation ── */
+@keyframes tab-slide-in {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ── Panel slide-in ── */
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panel-animate {
+  animation: panel-in 0.18s ease forwards;
+}
+
+/* ── Severity / status badge base ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-critical { border-color: rgba(248,113,113,0.35); background: rgba(248,113,113,0.12); color: #fca5a5; }
+.badge-high     { border-color: rgba(251,146,60,0.35);  background: rgba(251,146,60,0.12);  color: #fdba74; }
+.badge-medium   { border-color: rgba(251,191,36,0.35);  background: rgba(251,191,36,0.12);  color: #fcd34d; }
+.badge-low      { border-color: rgba(52,211,153,0.35);  background: rgba(52,211,153,0.12);  color: #6ee7b7; }
+.badge-info     { border-color: rgba(148,163,184,0.25); background: rgba(148,163,184,0.08); color: #94a3b8; }
+.badge-pass     { border-color: rgba(52,211,153,0.35);  background: rgba(52,211,153,0.10);  color: #6ee7b7; }
+.badge-fail     { border-color: rgba(248,113,113,0.35); background: rgba(248,113,113,0.10); color: #fca5a5; }
+.badge-warn     { border-color: rgba(251,191,36,0.35);  background: rgba(251,191,36,0.10);  color: #fcd34d; }
+
+/* ── Copy tooltip flash ── */
+@keyframes copied-flash {
+  0%   { opacity: 0; transform: translateY(2px); }
+  20%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── Settings modal backdrop blur ── */
+.modal-backdrop {
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-panel {
+  animation: modal-in 0.2s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Progress bar ── */
+.progress-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(30,41,59,1);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Sidebar in-tray item active indicator ── */
+.tray-item-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: var(--cyan);
+  box-shadow: 0 0 8px rgba(6,182,212,0.6);
+}
+
+/* ── Defanged URL copy highlight ── */
+.defanged:hover {
+  background: rgba(6,182,212,0.05);
+  border-radius: 3px;
+}
+
+/* ── Header row zebra (subtle) ── */
+.header-row:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.header-row:hover {
+  background: rgba(51, 65, 85, 0.3);
+}
+
+/* ── Risk arc colors via CSS custom properties ── */
+.risk-arc-critical { stroke: #f87171; filter: drop-shadow(0 0 5px rgba(248,113,113,0.5)); }
+.risk-arc-high     { stroke: #fb923c; filter: drop-shadow(0 0 5px rgba(251,146,60,0.5)); }
+.risk-arc-medium   { stroke: #fbbf24; filter: drop-shadow(0 0 5px rgba(251,191,36,0.5)); }
+.risk-arc-low      { stroke: #34d399; filter: drop-shadow(0 0 5px rgba(52,211,153,0.5)); }
+
+/* ── Watermark (sidebar footer) ── */
+.watermark-text {
+  font-size: 9px;
+  color: rgba(100,116,139,0.6);
+  user-select: none;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* ── Toggle switch ── */
+.toggle-track {
+  position: relative;
+  display: inline-flex;
+  height: 22px;
+  width: 42px;
+  border-radius: 999px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* ── Details / summary reset ── */
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+
+/* ── Prevent text selection drag on UI chrome ── */
+header, aside .tray-item-active {
+  user-select: none;
+}
+
+/* ── Responsive minimum ── */
+@media (max-width: 1200px) {
+  body { font-size: 13px; }
+}

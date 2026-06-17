@@ -1,0 +1,27 @@
+From: Finance Operations <finance@example-payments.com>
+To: Analyst <analyst@example.com>
+Subject: Action Required: Updated Remittance Instructions
+Date: Tue, 16 Jun 2026 12:00:00 +0000
+Message-ID: <sample-001@example-payments.com>
+Return-Path: <bounce@mailer-outbound.net>
+Authentication-Results: mx.example.com; spf=softfail smtp.mailfrom=mailer-outbound.net; dkim=pass header.d=mailer-outbound.net; dmarc=fail header.from=example-payments.com
+Received: from mx1.mailhost.net (mx1.mailhost.net [203.0.113.10]) by corp-edge.local with ESMTPS id abc123; Tue, 16 Jun 2026 12:00:00 +0000
+Received: from unknown (unknown [198.51.100.44]) by mx1.mailhost.net with ESMTP id def456; Tue, 16 Jun 2026 11:57:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="jigphish-boundary"
+
+--jigphish-boundary
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Urgent action required. Please verify payment and wire instructions within 24 hours.</p>
+<p><a href="https://secure-example-payments.com/login">Review remittance portal</a></p>
+<span style="font-size:0">hidden text</span>
+</body></html>
+
+--jigphish-boundary
+Content-Type: text/plain; name="invoice.txt"
+Content-Disposition: attachment; filename="invoice.txt"
+
+Invoice adjustment instructions.
+--jigphish-boundary--
