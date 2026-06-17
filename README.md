@@ -44,7 +44,11 @@ Drop an `.eml` file, get back:
 
 ## Screenshots
 
-> Drop a screenshot here — launch `build/bin/JigPhish.exe` and drag in a `.eml` to generate one.
+![JigPhish Analysis Overview](docs/screenshots/Screenshot_1.png)
+
+![Detection Flags & Heuristics](docs/screenshots/Screenshot_2.png)
+
+![Routing & OSINT Intelligence](docs/screenshots/Screenshot_3.png)
 
 ---
 
